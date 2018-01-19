@@ -92,12 +92,12 @@ I will be grading the final product according to the included rubric.
 - [ ] Add your names to the credits (see below)
 - [ ] Delete this line and everything above it
 
-# :boom: Put your app name on this line! :boom:
+# Crewton Clicker
 
 ## Description
-Describe your app here!
+Pretty much a cookie clicker but with a tree that makes crewtons instead of apples or other fruit.  you tap the tree to get crewtons which gets you money which you use to buy more trees and reasearch to make your crewtons better and buy more trees and more land to hold all the trees and if we can you can hire workers to pick crewtons for you.
 
 ## Credits
-* Joe Schmoe
-* Bob Smith
-* Susan Johnson
+* Brayden Crabb
+* Gianlucca Flores
+* Nathan Kong

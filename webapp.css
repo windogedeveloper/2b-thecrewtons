@@ -1,3 +1,14 @@
 @charset "UTF-8";
 /* CSS Document */
 
+<style media="screen">
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+	height: 100vh;
+	background: url("crouton.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+</style>
