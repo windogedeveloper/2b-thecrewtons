@@ -7,9 +7,10 @@
 }
 body {
 	height: 100vh;
-	background: url("crouton.jpg") no-repeat center center fixed;
+	background: url("images/crouton.jpg") no-repeat center center fixed;
 	background-size: cover;
 	color:white;
+
 }
 
 h1 {
