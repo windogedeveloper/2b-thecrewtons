@@ -10,6 +10,7 @@ function crouton_click() {
 	document.getElementById("score").value = money;
 }
 
-document.getElementById("tree").addEventListener("click", function(){
-	crouton_click();
-});
+window.onload = function() {
+	// add event listeners
+	document.getElementById("tree").addEventListener("click", crouton_click);
+};
