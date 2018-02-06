@@ -6,6 +6,7 @@ var trees = 1;
 var land = 5;
 var tree_price = 1;
 var land_price = 10;
+var worker_price = 1;
 
 function crouton_click() {
 	money += trees;
@@ -51,7 +52,7 @@ function buy_trees() {
 }
 
 function update_values() {
-	document.getElementById("score").value = money;
+	document.getElementById("score").value = "$" + money.toFixed(2);
 	document.getElementById("trees").value = trees;
 	document.getElementById("land").value = land;
 	document.getElementById("moretrees").innerHTML = "Buy More Trees $" + tree_price;
