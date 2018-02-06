@@ -27,12 +27,16 @@ function buy_land() {
 	if( money >= land_price ) {
 		money -= land_price;
 		land += 5;
-		land_price *= 1.1;
+		land_price = (land_price * 1.1).toFixed(2);
+	}
+	else if( money < land_price ) {
+		alert ("You do not have enough CashMoney");
 	}
 	update_values();
 }
 
 function buy_trees() {
+	//alert("money: " + money + "\ntrees: " + trees + "\nland: " + land);
 	if( money >= tree_price && trees < land ) {
 		money -= tree_price;
 		trees++;
@@ -40,10 +44,7 @@ function buy_trees() {
 	else if( trees >= land ) {
 		alert ("You do not have enough land");
 	}
-	else if( money > tree_price ) {
-		alert ("You do not have enough CashMoney");
-	}
-	else if( money > land_price ) {
+	else if( money < tree_price ) {
 		alert ("You do not have enough CashMoney");
 	}
 	update_values();
@@ -53,5 +54,7 @@ function update_values() {
 	document.getElementById("score").value = money;
 	document.getElementById("trees").value = trees;
 	document.getElementById("land").value = land;
+	document.getElementById("moretrees").innerHTML = "Buy More Trees $" + tree_price;
+	document.getElementById("moreland").innerHTML = "Buy More Land $" + land_price;
 
 }
