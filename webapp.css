@@ -13,13 +13,16 @@ body {
 	color:white;
 }
 
+input {
+	text-align: right
+}
 
 h1 {
 	text-align:center;
 }
 
 #wrapper {
-	width: 960px;
+	width: 620px;
 	margin: 20px auto;
 }
 
@@ -33,7 +36,12 @@ h1 {
 }
 #rightColumn {
 	float: right;
-	background-color: red;
+	background-color: blue;
+	width: 300px;
+	text-align: center;
 }
 
+#rightColumn input {
+	width: 100px;
+}
 
