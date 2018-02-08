@@ -4,9 +4,10 @@
 var money = 0;
 var trees = 1;
 var land = 5;
+var slaves = 0;
 var tree_price = 1;
 var land_price = 10;
-var worker_price = 1;
+var slave_price = 5;
 
 function crouton_click() {
 	money += trees;
@@ -22,6 +23,7 @@ window.onload = function() {
 	document.getElementById("tree").addEventListener("click", crouton_click);
 	document.getElementById("moretrees").addEventListener("click", buy_trees);
 	document.getElementById("moreland").addEventListener("click", buy_land);
+	document.getElementById("moreslaves").addEventListener("click", buy_slaves);
 };
 
 function buy_land() {
@@ -51,11 +53,24 @@ function buy_trees() {
 	update_values();
 }
 
+function buy_slaves() {
+	if( money >= slave_price) {
+		money -= slave_price;
+		slaves++;
+	}
+	else if( money < slave_price ) {
+		alert ("You do not have enough CashMoney");
+	}
+	update_values();
+}
+
 function update_values() {
 	document.getElementById("score").value = "$" + money.toFixed(2);
 	document.getElementById("trees").value = trees;
 	document.getElementById("land").value = land;
+	document.getElementById("slaves").value = slaves;
 	document.getElementById("moretrees").innerHTML = "Buy More Trees $" + tree_price;
 	document.getElementById("moreland").innerHTML = "Buy More Land $" + land_price;
+	document.getElementById("moreslaves").innerHTML = "Buy More Slaves $" + slave_price;
 
 }
