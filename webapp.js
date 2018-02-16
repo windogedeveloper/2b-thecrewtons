@@ -17,6 +17,8 @@ function crouton_click() {
 window.onload = function() {
 	// load cookies (if they exist)
 	
+	// setinterval to start bonus() repeating...
+	setInterval(bonus, 1000);
 	// update values
 	update_values();
 	// add event listeners
@@ -25,6 +27,12 @@ window.onload = function() {
 	document.getElementById("moreland").addEventListener("click", buy_land);
 	document.getElementById("moreslaves").addEventListener("click", buy_slaves);
 };
+
+// runs every second
+function bonus() {
+	//alert ("yaythebonusworked");
+	money == slaves*trees;
+}
 
 function buy_land() {
 	if( money >= land_price ) {
