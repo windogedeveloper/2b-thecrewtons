@@ -31,7 +31,8 @@ window.onload = function() {
 // runs every second
 function bonus() {
 	//alert ("yaythebonusworked");
-	money == slaves*trees;
+	money += slaves*trees;
+	update_values();
 }
 
 function buy_land() {
