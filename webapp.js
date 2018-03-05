@@ -9,8 +9,14 @@ var tree_price = 1;
 var land_price = 10;
 var slave_price = 5;
 
+//Functions for clicking trees
 function crouton_click() {
-	money += trees;
+	if(slaves > 0) {
+		money += Number(Number(slaves)*Number(land)*Number(trees));
+	}
+	else {
+		money += trees*land;
+	}
 	update_values();
 }
 
@@ -31,7 +37,7 @@ window.onload = function() {
 // runs every second
 function bonus() {
 	//alert ("yaythebonusworked");
-	money += slaves*trees;
+	money += slaves*trees*land;
 	update_values();
 }
 
